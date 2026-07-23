@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>목대 뭐먹지</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <strong class="brand">목대 뭐먹지</strong>
+      <span class="sub">목포대학교 주변 식당 탐색</span>
+    </div>
+    <button id="randomBtn" class="primary">오늘 추천</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">MNU Meal Finder</p>
+        <h1>공강 시간에 갈 만한 목대 주변 밥집을 빠르게 찾아보세요.</h1>
+        <p class="lead">가격대, 거리, 혼밥 가능 여부, 식사 상황으로 목포대학교 주변 식당을 골라보는 간단한 조사형 웹서비스입니다.</p>
+      </div>
+      <div class="today" id="todayPick">
+        <span>오늘의 추천</span>
+        <h2>불러오는 중</h2>
+        <p>버튼을 누르면 식당 하나를 골라줘요.</p>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="식당 필터">
+      <input id="searchInput" type="search" placeholder="식당명, 메뉴, 상황 검색">
+      <select id="categoryFilter">
+        <option value="all">전체 종류</option>
+        <option value="한식">한식</option>
+        <option value="분식">분식</option>
+        <option value="중식">중식</option>
+        <option value="카페">카페</option>
+        <option value="고기">고기</option>
+      </select>
+      <select id="priceFilter">
+        <option value="all">전체 가격</option>
+        <option value="7000">7천 원 이하</option>
+        <option value="10000">1만 원 이하</option>
+        <option value="15000">1만 5천 원 이하</option>
+      </select>
+      <label class="check"><input id="soloFilter" type="checkbox"> 혼밥 가능</label>
+    </section>
+
+    <section class="stats">
+      <div><b id="countStat">0</b><span>표시 중</span></div>
+      <div><b>5-15분</b><span>도보권 중심</span></div>
+      <div><b>학생 맞춤</b><span>상황별 추천</span></div>
+    </section>
+
+    <section id="restaurantList" class="grid" aria-live="polite"></section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="cardHead">
+        <div>
+          <span class="tag"></span>
+          <h3></h3>
+        </div>
+        <strong class="price"></strong>
+      </div>
+      <p class="menu"></p>
+      <p class="desc"></p>
+      <div class="meta"></div>
+      <a class="map" target="_blank" rel="noreferrer">지도에서 검색</a>
+    </article>
+  </template>
+
+  <script src="./script.js"></script>
+</body>
+</html>
