@@ -1,63 +1,113 @@
-const restaurants = [
+﻿const restaurants = [
   {
-    name: "정문 김밥",
-    category: "분식",
-    menu: "김밥, 라면, 떡볶이",
-    price: 7000,
-    walk: "정문 기준 도보 5분",
-    solo: true,
-    mood: "공강 1시간, 빠른 점심, 혼밥",
-    desc: "짧은 공강 시간에 가볍게 먹기 좋은 분식 후보입니다."
-  },
-  {
-    name: "목대 백반집",
+    name: "초심가든",
     category: "한식",
-    menu: "백반, 제육, 된장찌개",
-    price: 9000,
-    walk: "정문 기준 도보 8분",
-    solo: true,
-    mood: "든든한 점심, 시험기간, 집밥 느낌",
-    desc: "든든하게 한 끼 먹고 싶을 때 어울리는 한식 식당입니다."
-  },
-  {
-    name: "캠퍼스 짜장",
-    category: "중식",
-    menu: "짜장면, 짬뽕, 탕수육",
+    menu: "한식뷔페",
     price: 10000,
-    walk: "후문 기준 도보 7분",
+    walk: "무안 청계면권",
     solo: true,
-    mood: "빠른 저녁, 친구랑, 배달 후보",
-    desc: "메뉴 선택이 쉬워 여러 명이 함께 가기 좋은 중식 후보입니다."
+    mood: "든든한 점심, 가성비, 여러 반찬",
+    desc: "다양한 반찬으로 한 끼를 든든하게 먹고 싶을 때 보기 좋은 한식뷔페 후보입니다.",
+    mapQuery: "초심가든 무안 청계면 구암길 7-3"
   },
   {
-    name: "정문 고깃집",
-    category: "고기",
-    menu: "삼겹살, 목살, 김치찌개",
-    price: 15000,
-    walk: "정문 기준 도보 12분",
-    solo: false,
-    mood: "동기 모임, 저녁 약속, 회식",
-    desc: "과제 끝난 날이나 동기들과 저녁을 먹을 때 넣기 좋은 후보입니다."
-  },
-  {
-    name: "공강 카페",
-    category: "카페",
-    menu: "아메리카노, 샌드위치, 디저트",
-    price: 8000,
-    walk: "정문 기준 도보 6분",
-    solo: true,
-    mood: "공부, 노트북, 간단한 식사",
-    desc: "식사와 공부를 같이 해결하고 싶을 때 어울리는 카페형 장소입니다."
-  },
-  {
-    name: "국밥 한그릇",
+    name: "해바라기",
     category: "한식",
-    menu: "돼지국밥, 순대국밥",
-    price: 9500,
-    walk: "기숙사 기준 도보 10분",
+    menu: "제육볶음, 철판볶음밥",
+    price: 9000,
+    walk: "목포대 주변권",
     solo: true,
-    mood: "비 오는 날, 든든한 저녁, 혼밥",
-    desc: "날씨가 흐리거나 든든한 국물 메뉴가 필요할 때 추천할 만한 후보입니다."
+    mood: "점심, 혼밥, 간단한 한 끼",
+    desc: "수업 사이에 부담 없이 먹기 좋은 점심 메뉴 후보입니다.",
+    mapQuery: "해바라기 무안 목포대 제육볶음"
+  },
+  {
+    name: "고기짬뽕",
+    category: "중식",
+    menu: "짬뽕, 고기짬뽕",
+    price: 10000,
+    walk: "목포대 주변권",
+    solo: true,
+    mood: "해장, 매운 메뉴, 빠른 식사",
+    desc: "국물 있는 중식 메뉴가 당길 때 넣어볼 만한 짬뽕 후보입니다.",
+    mapQuery: "고기짬뽕 무안 목포대"
+  },
+  {
+    name: "앨리스 커피",
+    category: "카페",
+    menu: "커피, 디저트",
+    price: 8000,
+    walk: "무안 청계면권",
+    solo: true,
+    mood: "카공, 디저트, 공강",
+    desc: "커피와 디저트를 먹으면서 쉬거나 공부할 장소를 찾을 때 어울리는 후보입니다.",
+    mapQuery: "앨리스 커피 무안 목포대"
+  },
+  {
+    name: "장부식육식당",
+    category: "고기",
+    menu: "제육볶음, 돼지육회",
+    price: 15000,
+    walk: "무안 청계면권",
+    solo: false,
+    mood: "친구랑, 저녁, 현지인 맛집",
+    desc: "혼자보다는 친구들과 함께 든든하게 먹기 좋은 고기 메뉴 후보입니다.",
+    mapQuery: "장부식육식당 무안"
+  },
+  {
+    name: "승달수산",
+    category: "해산물",
+    menu: "회, 우럭, 낙지초무침",
+    price: 20000,
+    walk: "무안 청계면권",
+    solo: false,
+    mood: "모임, 해산물, 저녁",
+    desc: "해산물 메뉴를 먹고 싶거나 여럿이 식사할 때 확인해볼 수 있는 후보입니다.",
+    mapQuery: "승달수산 무안 목포대"
+  },
+  {
+    name: "신전떡볶이 목포대점",
+    category: "분식",
+    menu: "떡볶이, 튀김, 컵밥",
+    price: 8000,
+    walk: "목포대점",
+    solo: true,
+    mood: "분식, 배달, 간단식사",
+    desc: "매운 분식이나 간단한 배달 메뉴가 필요할 때 빠르게 고르기 좋은 후보입니다.",
+    mapQuery: "신전떡볶이 목포대점"
+  },
+  {
+    name: "한솥도시락 무안",
+    category: "도시락",
+    menu: "도시락, 단체도시락",
+    price: 7000,
+    walk: "목포대 주변권",
+    solo: true,
+    mood: "혼밥, 저렴한 식사, 포장",
+    desc: "가격 부담을 줄이고 빠르게 먹고 싶을 때 확인하기 좋은 도시락 후보입니다.",
+    mapQuery: "한솥도시락 무안 목포대"
+  },
+  {
+    name: "목대 브리또",
+    category: "양식",
+    menu: "브리또, 멕시코음식",
+    price: 9000,
+    walk: "목포대 주변권",
+    solo: true,
+    mood: "혼밥, 배달, 든든한 간식",
+    desc: "밥 메뉴가 지겨울 때 간단하면서도 든든하게 먹기 좋은 후보입니다.",
+    mapQuery: "목대 브리또 무안"
+  },
+  {
+    name: "메가커피 목포대점",
+    category: "카페",
+    menu: "커피, 음료",
+    price: 5000,
+    walk: "목포대점",
+    solo: true,
+    mood: "카공, 테이크아웃, 공강",
+    desc: "수업 전후로 음료를 빠르게 사거나 잠깐 쉬어가기 좋은 카페 후보입니다.",
+    mapQuery: "메가커피 목포대점"
   }
 ];
 
@@ -101,7 +151,7 @@ function render() {
       <span>${item.mood.split(",")[0]}</span>
     `;
     const link = card.querySelector(".map");
-    link.href = `https://map.naver.com/p/search/${encodeURIComponent(`목포대학교 ${item.name}`)}`;
+    link.href = `https://map.kakao.com/link/search/${encodeURIComponent(item.mapQuery)}`;
     list.appendChild(card);
   });
 }

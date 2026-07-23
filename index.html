@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
@@ -10,7 +10,7 @@
   <header class="topbar">
     <div>
       <strong class="brand">목대 뭐먹지</strong>
-      <span class="sub">목포대학교 주변 식당 탐색</span>
+      <span class="sub">목포대학교 주변 식당 찾기</span>
     </div>
     <button id="randomBtn" class="primary">오늘 추천</button>
   </header>
@@ -19,8 +19,8 @@
     <section class="hero">
       <div>
         <p class="eyebrow">MNU Meal Finder</p>
-        <h1>공강 시간에 갈 만한 목대 주변 밥집을 빠르게 찾아보세요.</h1>
-        <p class="lead">가격대, 거리, 혼밥 가능 여부, 식사 상황으로 목포대학교 주변 식당을 골라보는 간단한 조사형 웹서비스입니다.</p>
+        <h1>목대 근처 밥집을 조건으로 골라보세요.</h1>
+        <p class="lead">목포대학교 주변에서 실제 검색되는 식당 후보를 모아 메뉴, 가격대, 혼밥 여부, 식사 상황으로 정리했습니다. 가기 전에는 지도에서 위치와 영업 정보를 한 번 더 확인해보세요.</p>
       </div>
       <div class="today" id="todayPick">
         <span>오늘의 추천</span>
@@ -38,19 +38,23 @@
         <option value="중식">중식</option>
         <option value="카페">카페</option>
         <option value="고기">고기</option>
+        <option value="해산물">해산물</option>
+        <option value="도시락">도시락</option>
+        <option value="양식">양식</option>
       </select>
       <select id="priceFilter">
         <option value="all">전체 가격</option>
         <option value="7000">7천 원 이하</option>
         <option value="10000">1만 원 이하</option>
         <option value="15000">1만 5천 원 이하</option>
+        <option value="20000">2만 원 이하</option>
       </select>
       <label class="check"><input id="soloFilter" type="checkbox"> 혼밥 가능</label>
     </section>
 
     <section class="stats">
       <div><b id="countStat">0</b><span>표시 중</span></div>
-      <div><b>5-15분</b><span>도보권 중심</span></div>
+      <div><b>실제 후보</b><span>검색 결과 기반</span></div>
       <div><b>학생 맞춤</b><span>상황별 추천</span></div>
     </section>
 
@@ -69,7 +73,7 @@
       <p class="menu"></p>
       <p class="desc"></p>
       <div class="meta"></div>
-      <a class="map" target="_blank" rel="noreferrer">지도에서 검색</a>
+      <a class="map" target="_blank" rel="noreferrer">카카오맵에서 확인</a>
     </article>
   </template>
 
